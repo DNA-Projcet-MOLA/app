@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.mola_app" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+      <item name="statusBarBackground">#F2F2F2</item>
+      <item name="backgroundColor">#F2F2F2</item>
+      <item name="android:enforceStatusBarContrast">false</item>
+    </style>
+</resources>
