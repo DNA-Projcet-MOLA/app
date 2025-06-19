@@ -1,16 +1,16 @@
-import { layoutStyle } from '@/styles/layer.css';
+import { style } from "@vanilla-extract/css";
 
 export const alignStyles = {
-	start: layoutStyle({
-		alignItems: 'flex-start',
+	start: style({
+		alignItems: "flex-start",
 	}),
-	center: layoutStyle({
-		alignItems: 'center',
+	center: style({
+		alignItems: "center",
 	}),
-	end: layoutStyle({
-		alignItems: 'flex-end',
+	end: style({
+		alignItems: "flex-end",
 	}),
-	stretch: layoutStyle({
-		alignItems: 'stretch',
+	stretch: style({
+		alignItems: "stretch",
 	}),
 } as const;

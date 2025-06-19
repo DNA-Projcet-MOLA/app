@@ -1,13 +1,13 @@
-import { layoutStyle } from '@/styles/layer.css';
+import { style } from "@vanilla-extract/css";
 
-export const flex = layoutStyle({
-	display: 'flex',
+export const flex = style({
+	display: "flex",
 });
 
-export const noGrow = layoutStyle({
+export const noGrow = style({
 	flexGrow: 0,
 });
 
-export const noShrink = layoutStyle({
+export const noShrink = style({
 	flexShrink: 0,
 });

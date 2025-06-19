@@ -1,22 +1,22 @@
-import { layoutStyle } from '@/styles/layer.css';
+import { style } from "@vanilla-extract/css";
 
 export const justifyStyles = {
-	start: layoutStyle({
-		justifyContent: 'flex-start',
+	start: style({
+		justifyContent: "flex-start",
 	}),
-	center: layoutStyle({
-		justifyContent: 'center',
+	center: style({
+		justifyContent: "center",
 	}),
-	end: layoutStyle({
-		justifyContent: 'flex-end',
+	end: style({
+		justifyContent: "flex-end",
 	}),
-	'space-between': layoutStyle({
-		justifyContent: 'space-between',
+	"space-between": style({
+		justifyContent: "space-between",
 	}),
-	'space-around': layoutStyle({
-		justifyContent: 'space-around',
+	"space-around": style({
+		justifyContent: "space-around",
 	}),
-	'space-evenly': layoutStyle({
-		justifyContent: 'space-evenly',
+	"space-evenly": style({
+		justifyContent: "space-evenly",
 	}),
 } as const;

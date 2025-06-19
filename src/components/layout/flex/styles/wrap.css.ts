@@ -1,13 +1,13 @@
-import { layoutStyle } from '@/styles/layer.css';
+import { style } from "@vanilla-extract/css";
 
 export const wrapStyles = {
-	nowrap: layoutStyle({
-		flexWrap: 'nowrap',
+	nowrap: style({
+		flexWrap: "nowrap",
 	}),
-	wrap: layoutStyle({
-		flexWrap: 'wrap',
+	wrap: style({
+		flexWrap: "wrap",
 	}),
-	'wrap-reverse': layoutStyle({
-		flexWrap: 'wrap-reverse',
+	"wrap-reverse": style({
+		flexWrap: "wrap-reverse",
 	}),
 } as const;

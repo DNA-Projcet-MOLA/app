@@ -1,16 +1,16 @@
-import { layoutStyle } from '@/styles/layer.css';
+import { style } from "@vanilla-extract/css";
 
 export const directionStyles = {
-	row: layoutStyle({
-		flexDirection: 'row',
+	row: style({
+		flexDirection: "row",
 	}),
-	'row-reverse': layoutStyle({
-		flexDirection: 'row-reverse',
+	"row-reverse": style({
+		flexDirection: "row-reverse",
 	}),
-	column: layoutStyle({
-		flexDirection: 'column',
+	column: style({
+		flexDirection: "column",
 	}),
-	'column-reverse': layoutStyle({
-		flexDirection: 'column-reverse',
+	"column-reverse": style({
+		flexDirection: "column-reverse",
 	}),
 } as const;

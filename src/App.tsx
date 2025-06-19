@@ -1,6 +1,17 @@
 import "@/styles/reset.css";
 import "@/styles/font.css";
+import { Suspense } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home } from "./routes";
 
 export default function App() {
-	return <h1>mola</h1>;
+	return (
+		<BrowserRouter>
+			<Suspense>
+				<Routes>
+					<Route path="/" element={<Home />} />
+				</Routes>
+			</Suspense>
+		</BrowserRouter>
+	);
 }
