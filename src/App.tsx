@@ -3,7 +3,12 @@ import "@/styles/font.css";
 import { NuqsAdapter } from "nuqs/adapters/react";
 import { Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { CameraPage, HomePage } from "./routes";
+import {
+	CameraPage,
+	HomePage,
+	SubmissionsDetailPage,
+	SubmissionsPage,
+} from "./routes";
 import ResultPage from "./routes/result";
 
 export default function App() {
@@ -15,6 +20,11 @@ export default function App() {
 						<Route path="/" element={<HomePage />} />
 						<Route path="/camera" element={<CameraPage />} />
 						<Route path="/result" element={<ResultPage />} />
+						<Route path="/submissions" element={<SubmissionsPage />} />
+						<Route
+							path="/submissions/:id"
+							element={<SubmissionsDetailPage />}
+						/>
 					</Routes>
 				</NuqsAdapter>
 			</Suspense>

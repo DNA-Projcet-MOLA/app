@@ -1,4 +1,5 @@
 import { Pencil } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { Column } from "@/components/layout/column";
 import { Container } from "@/components/layout/container";
 import { Row } from "@/components/layout/row";
@@ -9,6 +10,8 @@ import { halfOpacity } from "@/styles/utils.css";
 import { profileImage } from "./styles/profile.css";
 
 export function HomeProfilePage() {
+	const navigate = useNavigate();
+
 	return (
 		<>
 			<Container horizontal="none">
@@ -28,7 +31,11 @@ export function HomeProfilePage() {
 			</ListGroup>
 			<ListGroup>
 				<ListGroup.Item label="테마 설정" value="라이트" />
-				<ListGroup.Item label="제출 내역" />
+				<ListGroup.Item
+					label="제출 내역"
+					value="5"
+					onClick={() => navigate("/submissions")}
+				/>
 			</ListGroup>
 			<Container>
 				<Button variant="secondary">로그아웃</Button>

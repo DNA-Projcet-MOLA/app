@@ -14,10 +14,10 @@ export function _ListGroupItem(props: ListGroupItemProps) {
 	const { label, value, onClick } = props;
 
 	return (
-		<Container vertical="regular" horizontal="small">
+		<Container vertical="regular" horizontal="small" onClick={onClick}>
 			<Row align="center" justify="space-between">
 				<Typo.Body weight="medium">{label}</Typo.Body>
-				<Row className={halfOpacity} gap={4} align="center" onClick={onClick}>
+				<Row className={halfOpacity} gap={4} align="center">
 					{value && <Typo.Body>{value}</Typo.Body>}
 					<ChevronRight size={18} />
 				</Row>
