@@ -2,6 +2,7 @@ import { Pencil } from "lucide-react";
 import { Column } from "@/components/layout/column";
 import { Container } from "@/components/layout/container";
 import { Row } from "@/components/layout/row";
+import { Button } from "@/components/ui/button";
 import { ListGroup } from "@/components/ui/list-group";
 import { Typo } from "@/components/ui/typography";
 import { halfOpacity } from "@/styles/utils.css";
@@ -29,6 +30,9 @@ export function HomeProfilePage() {
 				<ListGroup.Item label="테마 설정" value="라이트" />
 				<ListGroup.Item label="제출 내역" />
 			</ListGroup>
+			<Container>
+				<Button variant="secondary">로그아웃</Button>
+			</Container>
 		</>
 	);
 }
