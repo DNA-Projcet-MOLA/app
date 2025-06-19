@@ -10,7 +10,7 @@ export function TopNavigator(props: TopNavigatorProps) {
 	const { leadingArea, trailingArea } = props;
 
 	return (
-		<Container horizontal="large">
+		<Container>
 			<Row align="center" justify="space-between">
 				{leadingArea}
 				{trailingArea}

@@ -6,7 +6,7 @@ import { FloatingBar } from "@/components/ui/floating-bar";
 import { Logo } from "@/components/ui/logo";
 import { TopNavigator } from "@/components/ui/top-navigator";
 
-export default function Home() {
+export default function HomePage() {
 	const [tab] = useQueryState("tab", { defaultValue: "challenge" });
 
 	return (
