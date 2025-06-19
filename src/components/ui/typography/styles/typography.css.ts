@@ -9,7 +9,7 @@ export const typographyFill = style({
 });
 
 export const title = style({
-	fontSize: 32,
+	fontSize: 24,
 });
 
 export const lead = style({

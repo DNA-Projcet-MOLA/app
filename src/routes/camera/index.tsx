@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { Column } from "@/components/layout/column";
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
@@ -8,8 +9,11 @@ import { video, wrapper } from "./styles.css";
 
 export default function CameraPage() {
 	const videoRef = useRef<HTMLVideoElement>(null);
+	const navigate = useNavigate();
 
-	const onClickCapture = useCallback(() => {}, []);
+	const onClickCapture = useCallback(() => {
+		navigate("/result");
+	}, [navigate]);
 
 	useEffect(() => {
 		navigator.mediaDevices
@@ -29,7 +33,7 @@ export default function CameraPage() {
 
 	return (
 		<Column className={wrapper}>
-			<TopNavigator leadingArea={<GoBack />} />
+			<TopNavigator leadingArea={<GoBack path="/" />} />
 			<video
 				ref={videoRef}
 				className={video}
