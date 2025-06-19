@@ -26,5 +26,8 @@ export default defineConfig(async () => ({
 		watch: {
 			ignored: ["**/src-tauri/**"],
 		},
+		warmup: {
+			clientFiles: ["**/*.css.ts"],
+		},
 	},
 }));

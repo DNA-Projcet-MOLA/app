@@ -1,13 +1,19 @@
 import { Bell } from "lucide-react";
-import { Header } from "@/components/ui/header";
+import { useQueryState } from "nuqs";
+import { HomeChallengePage } from "@/components/pages/home/challenge";
+import { HomeProfilePage } from "@/components/pages/home/profile";
+import { FloatingBar } from "@/components/ui/floating-bar";
 import { Logo } from "@/components/ui/logo";
 import { TopNavigator } from "@/components/ui/top-navigator";
 
 export default function Home() {
+	const [tab] = useQueryState("tab", { defaultValue: "challenge" });
+
 	return (
 		<>
 			<TopNavigator leadingArea={<Logo />} trailingArea={<Bell />} />
-			<Header title="오늘의 도전" subtitle="2025년 6월 16일 월요일" />
+			{tab === "challenge" ? <HomeChallengePage /> : <HomeProfilePage />}
+			<FloatingBar />
 		</>
 	);
 }
