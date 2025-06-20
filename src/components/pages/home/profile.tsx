@@ -1,4 +1,5 @@
 import { Pencil } from "lucide-react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Column } from "@/components/layout/column";
 import { Container } from "@/components/layout/container";
@@ -7,9 +8,11 @@ import { Button } from "@/components/ui/button";
 import { ListGroup } from "@/components/ui/list-group";
 import { Typo } from "@/components/ui/typography";
 import { halfOpacity } from "@/styles/utils.css";
+import { HomeEditProfile } from "./edit-profile";
 import { profileImage } from "./styles/profile.css";
 
 export function HomeProfilePage() {
+	const [isEditOpen, setIsEditOpen] = useState(false);
 	const navigate = useNavigate();
 
 	return (
@@ -20,7 +23,9 @@ export function HomeProfilePage() {
 					<Typo.Lead weight="strong">빛나는해파리213</Typo.Lead>
 					<Row className={halfOpacity} gap={6} align="center">
 						<Pencil size={16} />
-						<Typo.Caption weight="medium">수정하기</Typo.Caption>
+						<Typo.Caption weight="medium" onClick={() => setIsEditOpen(true)}>
+							수정하기
+						</Typo.Caption>
 					</Row>
 				</Column>
 			</Container>
@@ -40,6 +45,7 @@ export function HomeProfilePage() {
 			<Container>
 				<Button variant="secondary">로그아웃</Button>
 			</Container>
+			{isEditOpen && <HomeEditProfile close={() => setIsEditOpen(false)} />}
 		</>
 	);
 }

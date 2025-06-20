@@ -1,11 +1,11 @@
-import type { JSX } from "react";
+import type { JSX, MouseEvent } from "react";
 import type { BaseProps, HAS_CHILDREN } from "@/types/props";
 
 interface ContainerProps extends BaseProps<HAS_CHILDREN> {
 	as?: keyof JSX.IntrinsicElements;
 	vertical?: Padding;
 	horizontal?: Padding;
-	onClick?: () => unknown;
+	onClick?: (e: MouseEvent) => unknown;
 }
 
 type Padding = "none" | "small" | "regular" | "medium" | "large";
