@@ -44,7 +44,15 @@ export const overlay = style({
 	placeItems: "center",
 });
 
-export const input = style({
+export const imageInput = style({
+	position: "absolute",
+	top: -999,
+	left: -999,
+	width: 1,
+	height: 1,
+});
+
+export const nicknameInput = style({
 	width: "100%",
 	padding: "16px 12px",
 	backgroundColor: "#FFF",

@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 import {
 	backdrop,
 	image,
-	input,
+	imageInput,
+	nicknameInput,
 	overlay,
 	popup,
 	profile,
@@ -37,16 +38,17 @@ export function HomeEditProfile(props: HomeEditProfileProps) {
 			>
 				<Container>
 					<Column align="center">
-						<div className={profile}>
+						<label className={profile}>
 							<img className={image} src="/profile.jpg" alt="Profile" />
 							<div className={overlay}>
 								<Camera size={36} />
 							</div>
-						</div>
+							<input className={imageInput} type="file" accept="image/*" />
+						</label>
 					</Column>
 				</Container>
 				<Container vertical="small" horizontal="small">
-					<input className={input} placeholder="닉네임" />
+					<input className={nicknameInput} placeholder="닉네임" />
 				</Container>
 				<Container vertical="small" horizontal="small">
 					<Button>저장</Button>
