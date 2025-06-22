@@ -3,6 +3,7 @@ import { type MouseEvent, useCallback } from "react";
 import { Column } from "@/components/layout/column";
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
 	backdrop,
 	image,
@@ -48,7 +49,8 @@ export function HomeEditProfile(props: HomeEditProfileProps) {
 					</Column>
 				</Container>
 				<Container vertical="small" horizontal="small">
-					<input className={nicknameInput} placeholder="닉네임" />
+					{/* <input className={nicknameInput} placeholder="닉네임" /> */}
+					<Input placeholder="닉네임" />
 				</Container>
 				<Container vertical="small" horizontal="small">
 					<Button>저장</Button>
