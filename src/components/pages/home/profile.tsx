@@ -1,5 +1,5 @@
 import { Pencil } from "lucide-react";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Column } from "@/components/layout/column";
 import { Container } from "@/components/layout/container";
@@ -14,6 +14,10 @@ import { profileImage } from "./styles/profile.css";
 export function HomeProfilePage() {
 	const [isEditOpen, setIsEditOpen] = useState(false);
 	const navigate = useNavigate();
+
+	const onClickLogout = useCallback(() => {
+		navigate("/auth/sign-in", { replace: true });
+	}, [navigate]);
 
 	return (
 		<>
@@ -43,7 +47,9 @@ export function HomeProfilePage() {
 				/>
 			</ListGroup>
 			<Container>
-				<Button variant="secondary">로그아웃</Button>
+				<Button variant="secondary" onClick={onClickLogout}>
+					로그아웃
+				</Button>
 			</Container>
 			{isEditOpen && <HomeEditProfile close={() => setIsEditOpen(false)} />}
 		</>

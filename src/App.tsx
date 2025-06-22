@@ -6,6 +6,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {
 	CameraPage,
 	HomePage,
+	SignInPage,
+	SignUpPage,
 	SubmissionsDetailPage,
 	SubmissionsPage,
 } from "./routes";
@@ -18,6 +20,8 @@ export default function App() {
 				<NuqsAdapter>
 					<Routes>
 						<Route path="/" element={<HomePage />} />
+						<Route path="/auth/sign-in" element={<SignInPage />} />
+						<Route path="/auth/sign-up" element={<SignUpPage />} />
 						<Route path="/camera" element={<CameraPage />} />
 						<Route path="/result" element={<ResultPage />} />
 						<Route path="/submissions" element={<SubmissionsPage />} />
