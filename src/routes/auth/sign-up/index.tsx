@@ -42,19 +42,16 @@ export default function SignUpPage() {
 		}
 
 		try {
-			const signupRes = await apiClient.post<SignUpResponse>(
-				"/api/users/api/signup/",
-				{
-					username,
-					email,
-					real_name: name,
-					birthdate,
-					school,
-					student_number: studentNumber,
-					password,
-					password2: passwordCheck,
-				},
-			);
+			await apiClient.post<SignUpResponse>("/api/users/api/signup/", {
+				username,
+				email,
+				real_name: name,
+				birthdate,
+				school,
+				student_number: studentNumber,
+				password,
+				password2: passwordCheck,
+			});
 			const loginRes = await apiClient.post<SignInResponse>(
 				"/api/users/api/login/",
 				{
@@ -64,7 +61,7 @@ export default function SignUpPage() {
 			);
 
 			localStorage.setItem("accessToken", loginRes.access);
-			localStorage.setItem("data", JSON.stringify(signupRes));
+			localStorage.setItem("user", JSON.stringify(loginRes.user));
 
 			await message("회원가입 성공");
 

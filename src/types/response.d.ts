@@ -13,8 +13,10 @@ export type SignInResponse = {
 	refresh: string;
 	user: {
 		username: string;
-		real_name: string;
 		email: string;
-		avatar: string;
+		real_name: string;
+		birthdate: string;
+		school: string;
+		student_number: number;
 	};
 };
