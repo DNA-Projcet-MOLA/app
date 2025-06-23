@@ -51,11 +51,3 @@ export const imageInput = style({
 	width: 1,
 	height: 1,
 });
-
-export const nicknameInput = style({
-	width: "100%",
-	padding: "16px 12px",
-	backgroundColor: "#FFF",
-	borderRadius: 16,
-	fontSize: 16,
-});

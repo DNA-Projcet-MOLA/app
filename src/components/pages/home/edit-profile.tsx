@@ -8,7 +8,6 @@ import {
 	backdrop,
 	image,
 	imageInput,
-	nicknameInput,
 	overlay,
 	popup,
 	profile,

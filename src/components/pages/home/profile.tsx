@@ -16,6 +16,7 @@ export function HomeProfilePage() {
 	const navigate = useNavigate();
 
 	const onClickLogout = useCallback(() => {
+		localStorage.clear();
 		navigate("/auth/sign-in", { replace: true });
 	}, [navigate]);
 
