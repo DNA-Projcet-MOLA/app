@@ -5,6 +5,9 @@ export const button = style({
 	padding: "16px 0",
 	borderRadius: 16,
 	textAlign: "center",
+	":disabled": {
+		opacity: 0.35,
+	},
 });
 
 export const primary = style({

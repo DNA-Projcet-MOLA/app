@@ -21,7 +21,8 @@
 		"noFallthroughCasesInSwitch": true,
 		"paths": {
 			"@/*": ["./src/*"]
-		}
+		},
+		"types": ["w3c-image-capture"]
 	},
 	"include": ["src"],
 	"references": [{ "path": "./tsconfig.node.json" }]
